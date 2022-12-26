@@ -78,11 +78,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Text(
                   '$_counter',
-                  style: const TextStyle(
-                      color: Colors.brown,
+                  style: TextStyle(
+                      color: (_counter < 0 ? Colors.red : Colors.white),
                       fontWeight: FontWeight.w700,
                       fontSize: 40),
                 ),
+                Text(
+                  _counter >= 0
+                      ? "Your counter value is Positive"
+                      : "Your counter value is Negative",
+                  style: const TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 20),
+                )
               ],
             ),
           ),
